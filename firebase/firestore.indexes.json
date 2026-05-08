@@ -1,0 +1,32 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "APP_Inventario_Vehiculos_NUEVOS",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "VIN",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fecha",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "APP_Inventario_Vehiculos_USADOS",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "PPU",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fecha",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}

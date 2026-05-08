@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "919554171205",
+    "project_id": "stock-vehiculos-suzuval",
+    "storage_bucket": "stock-vehiculos-suzuval.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919554171205:android:25e05fd7b019882d87de2c",
+        "android_client_info": {
+          "package_name": "com.Suzuval.appinventariosuzuval"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMMVXp1s5jIt1mxwdFjiIH02EYGRWkf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919554171205:android:4c77e6740d8a9ddc87de2c",
+        "android_client_info": {
+          "package_name": "com.Suzuval.inventariovehiculossuzuval"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMMVXp1s5jIt1mxwdFjiIH02EYGRWkf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919554171205:android:bf8b877493df725d87de2c",
+        "android_client_info": {
+          "package_name": "com.mycompany.monitorinventariovehiculossuzuval"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMMVXp1s5jIt1mxwdFjiIH02EYGRWkf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

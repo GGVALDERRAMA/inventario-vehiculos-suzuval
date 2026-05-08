@@ -1,0 +1,6 @@
+package com.Suzuval.inventariovehiculossuzuval
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
