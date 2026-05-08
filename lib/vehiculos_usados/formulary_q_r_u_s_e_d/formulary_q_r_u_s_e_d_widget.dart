@@ -1383,15 +1383,20 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                     children: [
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Icon(
-                          Icons.app_registration_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 30.0,
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              80.0, 22.0, 0.0, 0.0),
+                          child: Icon(
+                            Icons.app_registration_rounded,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 30.0,
+                          ),
                         ),
                       ),
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 100.0, 0.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 18.0, 100.0, 0.0),
                           child: TextFormField(
                             controller: _model.kilometrajeTextController,
                             focusNode: _model.kilometrajeFocusNode,
@@ -1499,27 +1504,30 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              80.0, 22.0, 0.0, 0.0),
                           child: Icon(
                             Icons.battery_charging_full_rounded,
                             color: FlutterFlowTheme.of(context).secondaryText,
                             size: 30.0,
                           ),
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 100.0, 0.0),
-                            child: TextFormField(
-                              controller: _model.cargaBateriaTextController,
-                              focusNode: _model.cargaBateriaFocusNode,
-                              autofocus: false,
-                              obscureText: false,
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 18.0, 100.0, 0.0),
+                          child: TextFormField(
+                            controller: _model.cargaBateriaTextController,
+                            focusNode: _model.cargaBateriaFocusNode,
+                            autofocus: false,
+                            obscureText: false,
                             decoration: InputDecoration(
                               labelText: '% Carga Batería',
                               labelStyle: FlutterFlowTheme.of(context)
@@ -1533,7 +1541,8 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                                           .labelMedium
                                           .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).primaryText,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -1563,7 +1572,8 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                                   ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
@@ -1592,7 +1602,9 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                               filled: true,
                               fillColor: Color(0xB3247F96),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
                                   font: GoogleFonts.readexPro(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -1618,7 +1630,6 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                       ),
                     ],
                   ),
-                ),
                 Align(
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
