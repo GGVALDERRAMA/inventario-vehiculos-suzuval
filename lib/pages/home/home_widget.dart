@@ -326,6 +326,65 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                           ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Flexible(
+                        child: Align(
+                          alignment: AlignmentDirectional(0.0, 0.7),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('Eliminar Cuenta'),
+                                      content: Text('¿Estás seguro de que deseas eliminar tu cuenta permanentemente? Esta acción no se puede deshacer.'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(alertDialogContext, false),
+                                          child: Text('Cancelar'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(alertDialogContext, true),
+                                          child: Text('Eliminar', style: TextStyle(color: Colors.red)),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ) ?? false;
+                                if (confirmDialogResponse) {
+                                  await authManager.deleteUser(context);
+                                  GoRouter.of(context).clearRedirectLocation();
+                                  context.goNamedAuth(LoginWidget.routeName, context.mounted);
+                                }
+                              },
+                              text: 'Eliminar Cuenta',
+                              options: FFButtonOptions(
+                                height: 40.0,
+                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xFFE53935), // Rojo
+                                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                      font: GoogleFonts.readexPro(
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                      color: Colors.white,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(24.0),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
