@@ -39,3 +39,5 @@ export '/monitor_inventario/ultimo_registro_n_u_e_v_o_s/ultimo_registro_n_u_e_v_
     show UltimoRegistroNUEVOSWidget;
 export '/monitor_inventario/ultimo_registro_u_s_a_d_o_s/ultimo_registro_u_s_a_d_o_s_widget.dart'
     show UltimoRegistroUSADOSWidget;
+export '/pages/eliminar_cuenta/eliminar_cuenta_widget.dart'
+    show EliminarCuentaWidget;

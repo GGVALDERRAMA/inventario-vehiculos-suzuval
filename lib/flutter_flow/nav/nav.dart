@@ -107,6 +107,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => HomeWidget(),
         ),
         FFRoute(
+          name: EliminarCuentaWidget.routeName,
+          path: EliminarCuentaWidget.routePath,
+          builder: (context, params) => EliminarCuentaWidget(),
+        ),
+        FFRoute(
           name: LoadingPageWidget.routeName,
           path: LoadingPageWidget.routePath,
           builder: (context, params) => LoadingPageWidget(),
