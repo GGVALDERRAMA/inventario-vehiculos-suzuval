@@ -82,7 +82,7 @@ class _MenuInventarioUsadosWidgetState extends State<MenuInventarioUsadosWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondary,
-        drawer: const CustomDrawerWidget(),
+        drawer: CustomDrawerWidget(),
         appBar: AppBar(
           backgroundColor: Color(0xFF247F96),
           iconTheme: IconThemeData(color: Color(0xFFF9EF58)),
