@@ -19,6 +19,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:simple_barcode_scanner/simple_barcode_scanner.dart';
 import 'formulary_q_r_u_s_e_d_model.dart';
 import '/components/custom_drawer_widget.dart';
 export 'formulary_q_r_u_s_e_d_model.dart';
@@ -401,12 +402,13 @@ class _FormularyQRUSEDWidgetState extends State<FormularyQRUSEDWidget>
                                                         size: 24.0,
                                                       ),
                                                       onPressed: () async {
-                                                        final scanned = await FlutterBarcodeScanner.scanBarcode(
-                                                          '#C62828', // scanning line color
-                                                          'Cancel', // cancel button text
-                                                          true, // whether to show the torch (camera LED) toggle icon
-                                                          ScanMode.QR,
+                                                        final res = await Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                            builder: (context) => const SimpleBarcodeScannerPage(),
+                                                          ),
                                                         );
+                                                        final scanned = res is String ? res : '-1';
                                                         if (scanned != '-1') {
                                                           context.pushReplacementNamed(
                                                             FormularyQRUSEDWidget.routeName,
